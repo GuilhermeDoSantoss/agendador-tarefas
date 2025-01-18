@@ -1,0 +1,9 @@
+FROM openjdk:17-jdk-alpine
+
+WORKDIR /app
+
+COPY build/libd/agendador-0.0.1-SNAPSHOT.jar  /app/agendador.jar
+
+EXPOSE 8081
+
+CMD ["java", "-jar", "/app/agendador.jar"]
